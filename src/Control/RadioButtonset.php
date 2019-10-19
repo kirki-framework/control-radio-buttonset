@@ -29,7 +29,7 @@ class RadioButtonset extends \WP_Customize_Control {
 	 * @since 2.0
 	 * @var string
 	 */
-	public $type = 'kirki-radio-buttonset';
+	public $type = 'kirki-react-radio-buttonset';
 
 	/**
 	 * The control version.
@@ -63,7 +63,7 @@ class RadioButtonset extends \WP_Customize_Control {
 
 		// Enqueue the script.
 		wp_enqueue_script(
-			'kirki-radio-buttonset',
+			'kirki-react-radio-buttonset',
 			$folder_url . '/dist/main.js',
 			[ 'customize-controls', 'wp-element', 'jquery', 'customize-base' ],
 			self::$control_ver,
@@ -72,7 +72,7 @@ class RadioButtonset extends \WP_Customize_Control {
 
 		// Enqueue the style.
 		wp_enqueue_style(
-			'kirki-radio-buttonset',
+			'kirki-react-radio-buttonset',
 			$folder_url . '/src/style.css',
 			[],
 			self::$control_ver
@@ -91,6 +91,8 @@ class RadioButtonset extends \WP_Customize_Control {
 
 		// Get the basics from the parent class.
 		parent::to_json();
+
+		$this->json['choices'] = $this->choices;
 	}
 
 	/**

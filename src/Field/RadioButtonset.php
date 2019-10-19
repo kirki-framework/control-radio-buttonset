@@ -26,7 +26,7 @@ class RadioButtonset extends Field {
 	 * @since 1.0
 	 * @var string
 	 */
-	public $type = 'kirki-radio-buttonset';
+	public $type = 'kirki-react-radio-buttonset';
 
 	/**
 	 * The control class-name.
@@ -79,7 +79,7 @@ class RadioButtonset extends Field {
 	public function filter_control_args( $args, $wp_customize ) {
 		if ( $args['settings'] === $this->args['settings'] ) {
 			$args         = parent::filter_control_args( $args, $wp_customize );
-			$args['type'] = 'kirki-radio-buttonset';
+			$args['type'] = 'kirki-react-radio-buttonset';
 		}
 		return $args;
 	}

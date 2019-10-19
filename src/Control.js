@@ -1,5 +1,5 @@
 /* global jQuery, React, ReactDOM, Color */
-import RadioButtonsetForm from './RadioButtonsetForm';
+import RadioButtonsetForm from './Form';
 
 /**
  * RadioButtonsetControl.
@@ -67,6 +67,7 @@ const RadioButtonsetControl = wp.customize.Control.extend( {
 				setNotificationContainer={ control.setNotificationContainer }
 				customizerSetting={ control.setting }
 				control={ control }
+				choices={ control.params.choices }
 			/>,
 			control.container[ 0 ]
 		);
@@ -81,8 +82,6 @@ const RadioButtonsetControl = wp.customize.Control.extend( {
 	 */
 	ready: function ready() {
 		const control = this;
-
-		control.setMode( control.getMode() );
 
 		// Re-render control when setting changes.
 		control.setting.bind( () => {
