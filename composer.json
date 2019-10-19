@@ -1,7 +1,7 @@
 {
-    "name": "kirki-framework/control-foo",
+    "name": "kirki-framework/control-radio-buttonset",
     "type": "library",
-    "description": "My awesome control.",
+    "description": "Radio Buttonset Control.",
     "keywords": ["wordpress", "customizer", "framework"],
     "homepage": "https://aristath.github.io/kirki",
     "license": "MIT",

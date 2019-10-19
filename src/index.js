@@ -1,4 +1,4 @@
-import MyControlControl from './MyControlControl';
+import RadioButtonsetControl from './RadioButtonsetControl';
 
 // Register control type with Customizer.
-wp.customize.controlConstructor[ 'my-control' ] = MyControlControl;
+wp.customize.controlConstructor[ 'kirki-radio-buttonset' ] = RadioButtonsetControl;

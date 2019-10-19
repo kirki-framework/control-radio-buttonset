@@ -17,7 +17,7 @@ use Kirki\Field;
  *
  * @since 1.0
  */
-class MyControl extends Field {
+class RadioButtonset extends Field {
 
 	/**
 	 * The field type.
@@ -26,7 +26,7 @@ class MyControl extends Field {
 	 * @since 1.0
 	 * @var string
 	 */
-	public $type = 'my-control';
+	public $type = 'kirki-radio-buttonset';
 
 	/**
 	 * The control class-name.
@@ -35,7 +35,7 @@ class MyControl extends Field {
 	 * @since 0.1
 	 * @var string
 	 */
-	protected $control_class = '\Kirki\Control\MyControl';
+	protected $control_class = '\Kirki\Control\RadioButtonset';
 
 	/**
 	 * Whether we should register the control class for JS-templating or not.
@@ -79,7 +79,7 @@ class MyControl extends Field {
 	public function filter_control_args( $args, $wp_customize ) {
 		if ( $args['settings'] === $this->args['settings'] ) {
 			$args         = parent::filter_control_args( $args, $wp_customize );
-			$args['type'] = 'my-control';
+			$args['type'] = 'kirki-radio-buttonset';
 		}
 		return $args;
 	}

@@ -20,7 +20,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  *
  * @since 2.0
  */
-class MyControl extends \WP_Customize_Control {
+class RadioButtonset extends \WP_Customize_Control {
 
 	/**
 	 * The control type.
@@ -29,7 +29,7 @@ class MyControl extends \WP_Customize_Control {
 	 * @since 2.0
 	 * @var string
 	 */
-	public $type = 'my-control';
+	public $type = 'kirki-radio-buttonset';
 
 	/**
 	 * The control version.
@@ -63,7 +63,7 @@ class MyControl extends \WP_Customize_Control {
 
 		// Enqueue the script.
 		wp_enqueue_script(
-			'my-control',
+			'kirki-radio-buttonset',
 			$folder_url . '/dist/main.js',
 			[ 'customize-controls', 'wp-element', 'jquery', 'customize-base' ],
 			self::$control_ver,
@@ -72,7 +72,7 @@ class MyControl extends \WP_Customize_Control {
 
 		// Enqueue the style.
 		wp_enqueue_style(
-			'my-control',
+			'kirki-radio-buttonset',
 			$folder_url . '/src/style.css',
 			[],
 			self::$control_ver

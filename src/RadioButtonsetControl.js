@@ -1,14 +1,14 @@
 /* global jQuery, React, ReactDOM, Color */
-import MyControlForm from './MyControlForm';
+import RadioButtonsetForm from './RadioButtonsetForm';
 
 /**
- * MyControlControl.
+ * RadioButtonsetControl.
  *
  * @class
  * @augments wp.customize.Control
  * @augments wp.customize.Class
  */
-const MyControlControl = wp.customize.Control.extend( {
+const RadioButtonsetControl = wp.customize.Control.extend( {
 
 	/**
 	 * Initialize.
@@ -61,7 +61,7 @@ const MyControlControl = wp.customize.Control.extend( {
 		const value = control.setting.get();
 
 		ReactDOM.render(
-			<MyControlForm
+			<RadioButtonsetForm
 				{ ...control.params }
 				value={ value }
 				setNotificationContainer={ control.setNotificationContainer }
@@ -111,4 +111,4 @@ const MyControlControl = wp.customize.Control.extend( {
 	}
 } );
 
-export default MyControlControl;
+export default RadioButtonsetControl;

@@ -1,6 +1,6 @@
 /* globals React */
 /* eslint jsx-a11y/label-has-for: off */
-const MyControlForm = ( props ) => {
+const RadioButtonsetForm = ( props ) => {
 
 	// Styles.
 	const styles = reactCSS( {
@@ -22,4 +22,4 @@ const MyControlForm = ( props ) => {
 	);
 };
 
-export default MyControlForm;
+export default RadioButtonsetForm;
