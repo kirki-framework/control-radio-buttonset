@@ -19,8 +19,8 @@ const RadioButtonsetForm = ( props ) => {
 		let labelStyles = {
 			display: 'block',
 			border: '1px solid',
-			'border-color': '#b4b9be',
-			padding: '.5em 1em',
+			'border-color': '#a0a5aa',
+			padding: '6px 8px',
 			'margin': '0 3px 2px 0',
 			'border-radius': '3px'
 		}
@@ -43,6 +43,10 @@ const RadioButtonsetForm = ( props ) => {
 			buttonsetWrapper: {
 				display: 'flex',
 				'flex-wrap': 'wrap',
+			},
+
+			input: {
+				display: props.hideInput ? 'none' : 'inline-block'
 			}
 		}
 	} );
@@ -57,8 +61,9 @@ const RadioButtonsetForm = ( props ) => {
 						value={ option }
 						checked={ isChecked( option ) }
 						onChange={ handleChange }
+						style={ styles.input }
 					/>
-					{ props.choices[ option ] }
+					<span dangerouslySetInnerHTML={ { __html: props.choices[ option ] } }></span>
 				</label>
 			);
 		} );

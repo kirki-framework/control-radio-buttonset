@@ -68,6 +68,7 @@ const RadioButtonsetControl = wp.customize.Control.extend( {
 				customizerSetting={ control.setting }
 				control={ control }
 				choices={ control.params.choices }
+				hideInput={ control.params.hideInput }
 			/>,
 			control.container[ 0 ]
 		);

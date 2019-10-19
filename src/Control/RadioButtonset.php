@@ -32,6 +32,15 @@ class RadioButtonset extends \WP_Customize_Control {
 	public $type = 'kirki-react-radio-buttonset';
 
 	/**
+	 * Whether we want to hide the input or not.
+	 *
+	 * @access public
+	 * @since 2.0
+	 * @var bool
+	 */
+	public $hide_input = false;
+
+	/**
 	 * The control version.
 	 *
 	 * @static
@@ -91,6 +100,8 @@ class RadioButtonset extends \WP_Customize_Control {
 
 		// Get the basics from the parent class.
 		parent::to_json();
+
+		$this->json['hideInput'] = $this->hide_input;
 
 		$this->json['choices'] = $this->choices;
 	}
