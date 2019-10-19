@@ -1,0 +1,20 @@
+{
+	"extends": [
+		"plugin:@wordpress/eslint-plugin/recommended"
+	],
+	"env": {
+		"browser": true,
+		"es6": true
+	},
+	"rules": {
+		"comma-dangle": [2, "never"]
+	},
+	"settings": {
+		"react": {
+			"version": "detect"
+		}
+	},
+	"parserOptions": {
+        "sourceType": "module"
+	}
+}
