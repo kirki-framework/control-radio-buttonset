@@ -19,14 +19,14 @@ const RadioButtonsetForm = ( props ) => {
 		let labelStyles = {
 			display: 'block',
 			border: '1px solid',
-			'border-color': '#a0a5aa',
+			borderColor: '#a0a5aa',
 			padding: '6px 8px',
-			'margin': '0 3px 2px 0',
-			'border-radius': '3px'
+			margin: '0 3px 2px 0',
+			borderRadius: '3px'
 		}
 		if ( isChecked( option ) ) {
-			labelStyles['border-color'] = '#00a0d2';
-			labelStyles['box-shadow'] = 'inset 0 -2px 0 0 #00a0d2';
+			labelStyles.borderColor = '#00a0d2';
+			labelStyles.boxShadow = 'inset 0 -2px 0 0 #00a0d2';
 		}
 
 		const styles = reactCSS( {
@@ -42,7 +42,7 @@ const RadioButtonsetForm = ( props ) => {
 		default: {
 			buttonsetWrapper: {
 				display: 'flex',
-				'flex-wrap': 'wrap',
+				flexWrap: 'wrap',
 			},
 
 			input: {
