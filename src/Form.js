@@ -13,6 +13,16 @@ const RadioButtonsetForm = ( props ) => {
 		return option === wp.customize( props.customizerSetting.id ).get();
 	};
 
+	const getHash = ( input ) => {
+		let hash = 0, len = input.length;
+		for ( let i = 0; i < len; i++ ) {
+			hash = ( ( hash << 5 ) - hash ) + input.charCodeAt( i );
+			hash |= 0; // to 32bit integer.
+		}
+		hash = 0 > hash ? 0 - hash : hash;
+		return hash;
+	}
+
 	// Get styles for label.
 	const getLabelStyles = ( option ) => {
 
@@ -55,7 +65,10 @@ const RadioButtonsetForm = ( props ) => {
 		const radios = [];
 		Object.keys( props.choices ).map( function( option ) {
 			radios.push(
-				<label style={ getLabelStyles( option ) }>
+				<label
+					key={ getHash( props.control.id + 'radio' + option ) }
+					style={ getLabelStyles( option ) }
+				>
 					<input
 						type="radio"
 						value={ option }
